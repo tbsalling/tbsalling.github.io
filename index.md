@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+## Thomas Borg Salling
 
-You can use the [editor on GitHub](https://github.com/tbsalling/tbsalling.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I am a fulltime freelance programmer and remote worker with 20+ years of experience. Specialized in Java and open source programming. Domain experience from defence, maritime, banking, government, retail and others.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The focus of my work is developing system integration/backend solutions for large and mission-critical systems.
 
-### Markdown
+I contract for remote work in Scandinavia and Europe – with frequent traveling for workshops, team meetings, integration sessions, demos, etc.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Getting in touch
 
-```markdown
-Syntax highlighted code block
+Call me on +45 4063 2353.
+LinkedIn
+Twitter
+StackOverflow
+Github
 
-# Header 1
-## Header 2
-### Header 3
+### Open source projects
 
-- Bulleted
-- List
+I am the inventor and maintainer of 
 
-1. Numbered
-2. List
+- [AISmessages](https://github.com/tbsalling/aismessages)
+- [AISutils](https://github.com/tbsalling/aisutils)
 
-**Bold** and _Italic_ and `Code` text
+Both projects have commercial users and are related to decoding safety- and navigation related digital messages from ships. The source code is available on Github and the binaries are in Maven Central.
 
-[Link](url) and ![Image](src)
-```
+### Posts
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[What is AIS?](./blog_000_ais.html)
 
-### Jekyll Themes
+### Technical keywords
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tbsalling/tbsalling.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+I have experience with a vast number of tools and technologies related to Java and cloud. To mention a few:
 
-### Support or Contact
+Java SE, Java MP, Quarkus, Helm, OpenShift.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Java API's (JPA, Hibernate, CDI, JTA), databases (e.g. Oracle, Postgres, MS-SQL, Cassandra), build tools (Gradle, maven).
