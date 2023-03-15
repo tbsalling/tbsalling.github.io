@@ -10,7 +10,7 @@
 
 * Fulltime freelance programmer and remote worker with 20+ years of experience.
 
-* University trained engineer 
+* University trained engineer.
 
 * Specialized in Java and open source programming. 
 
