@@ -1,10 +1,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-I am a fulltime freelance programmer and remote worker with 20+ years of experience. Specialized in Java and open source programming. Domain experience from defence, maritime, banking, government, retail and others.
+<img src="images/tbs.webp" style="float: right" width="25%" height="25%" />
 
-The focus of my work is developing system integration/backend solutions for large and mission-critical systems.
+# Who am I?
 
-From my base near Århus, Denmark, I contract for remote work in Scandinavia and Europe – with frequent traveling for workshops, team meetings, integration sessions, demos, etc.
+* Fulltime freelance programmer and remote worker with 20+ years of experience.
+
+* University trained engineer 
+
+* Specialized in Java and open source programming. 
+
+* Domain experience from e.g. defence, maritime, banking, government, healthcare, and retail.
+
+* System integration/backend solutions for large and mission-critical systems, sometimes with a twist of applied mathematics.
+
+* Based near Århus, Denmark.
+
+* Contracting for remote work in Scandinavia and Europe – with frequent traveling for workshops, team meetings, integration sessions, demos, etc.
 
 # Open source projects
 
@@ -13,11 +25,22 @@ I am the inventor and maintainer of
 - [AISmessages](https://github.com/tbsalling/aismessages)
 - [AISutils](https://github.com/tbsalling/aisutils)
 
-Both projects have commercial users and are related to decoding safety- and navigation related digital messages from ships. The source code is available on Github and the binaries are in Maven Central.
+Both projects have commercial users and are related to decoding of safety- and navigation related digital messages from ships. The source code is available on Github and the binaries are in Maven Central.
 
-# Posts
+# Clients
 
-[What is AIS?](./blog_000_ais.html)
+Featured clients that I have worked for:
+
+<img src="images/logo_jb.jpg" style="margin: 15px 15px 15px 15px" />
+<img src="images/logo_systematic.jpg" style="margin: 15px 15px 15px 15px" />
+<img src="images/logo_bankdata.jpg" style="margin: 15px 15px 15px 15px" />
+<img src="images/logo_frequentis.jpg" style="margin: 15px 15px 15px 15px" />
+<img src="images/logo_dma.jpg" style="margin: 15px 15px 15px 15px" />
+<img src="images/logo_nets.jpg" style="margin: 15px 15px 15px 15px" />
+
+# Projects
+
+Read my portfolio of [featured freelance projects](clients.md).
 
 # Getting in touch
 
@@ -33,8 +56,41 @@ Both projects have commercial users and are related to decoding safety- and navi
 </div>
 {% endif %}
 
+# Availability
+
+My next availabiliy date for full-time work is: 2023-SEP-01.
+
 # Technical keywords
 
-Java SE, Java MP, Quarkus, Helm, OpenShift.
+* Programming languages and frameworks
+    * Java SE
+    * Java MP
+    * Quarkus
+    * Spring Boot
+    * Hibernate
 
-Java API's (JPA, Hibernate, CDI, JTA), databases (e.g. Oracle, Postgres, MS-SQL, Cassandra), build tools (Gradle, maven).
+* Java API's 
+    * JPA
+    * CDI
+    * JTA
+
+* Cloud technologies
+    * OpenShift
+    * Infinispan/DataGrid
+    * Docker
+    * Jaeger
+    * Helm
+
+* Databases
+    * Oracle
+    * Postgres
+    * MSSQL
+    * Cassandra
+
+* Build tools
+    * Gradle
+    * Maven
+
+# Posts
+
+[What is AIS?](./blog_000_ais.html)
