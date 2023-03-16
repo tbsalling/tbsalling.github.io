@@ -60,6 +60,10 @@ Read my portfolio of [featured freelance projects](clients.md).
 </div>
 {% endif %}
 
+# Recommendations
+
+[Read recommendations](https://www.linkedin.com/in/tbsalling/details/recommendations/) given to me on LinkedIn.
+
 # Availability
 
 My next availabiliy date for full-time work is: 2023-SEP-01.
