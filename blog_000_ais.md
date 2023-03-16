@@ -4,6 +4,10 @@ date: 2019-08-01
 categories: AIS
 ---
 
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
+
 # What is AIS?
 _(Posted {{page.date}})_
 

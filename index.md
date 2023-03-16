@@ -1,34 +1,26 @@
-<meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "g9eu115q8v");
-</script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
 
 <img src="images/tbs.webp" style="float: right" width="25%" height="25%" />
 
 # Who am I?
 
-* Fulltime freelance programmer and remote worker with 20+ years of experience.
+* Fulltime freelance programmer and remote worker.
+  
+* 20+ years of experience as a freelancer.
 
 * University trained engineer.
 
 * Specialized in Java and open source programming. 
 
-* Domain experience from e.g. defence, maritime, banking, government, healthcare, and retail.
+* Domain experience from e.g. banking, government, healthcare, defence, maritime and retail.
 
 * System integration/backend solutions for large and mission-critical systems, sometimes with a twist of applied mathematics.
 
 * Based near Århus, Denmark.
 
-* Contracting for remote work in Scandinavia and Europe – with frequent traveling for workshops, team meetings, integration sessions, demos, etc.
+* Contracting for remote work in Scandinavia and Europe – with traveling for workshops, team meetings, integration sessions, demos, etc.
 
 # Open source projects
 
@@ -105,4 +97,8 @@ My next availabiliy date for full-time work is: 2023-SEP-01.
 
 # Posts
 
-[What is AIS?](./blog_000_ais.html)
+* [What is AIS?](./blog_000_ais.html)
+* [Creating a Spring Boot based AIS message decoder](./blog_001_ais_decoder_spring_boot.html)
+* [Creating, sharing and running a Docker image to decode AIS messages](./blog_002_ais_decoder_docker.html)
+* [Running AISdecoder in a Kubernetes cluster on AWS](./blog_003_ais_decoder_kubernetes.html)
+* [Introducing Java modules in AISmessages](./blog_004_ais_messages_java_modules.html)
