@@ -4,6 +4,10 @@ date: 2018-09-13
 categories: AIS
 ---
 
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
+
 # Creating a Spring Boot based AIS message decoder
 _(Posted {{page.date}})_
 

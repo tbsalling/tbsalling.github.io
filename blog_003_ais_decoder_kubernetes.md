@@ -4,6 +4,10 @@ date: 2018-10-12
 categories: AIS
 ---
 
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
+
 # Running AISdecoder in a Kubernetes cluster on AWS
 _(Posted {{page.date}})_
 

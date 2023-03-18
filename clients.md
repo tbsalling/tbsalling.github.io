@@ -1,3 +1,7 @@
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
+
 # Featured Projects
 
 <table id="tablepress-1" class="tablepress tablepress-id-1">

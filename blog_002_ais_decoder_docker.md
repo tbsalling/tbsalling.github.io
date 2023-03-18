@@ -4,6 +4,10 @@ date: 2018-09-24
 categories: AIS
 ---
 
+{% include meta.html %}
+{% include clarity.html %}
+{% include font.html %}
+
 # Creating, sharing and running a Docker image to decode AIS messages
 _(Posted {{page.date}})_
 
