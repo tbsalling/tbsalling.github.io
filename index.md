@@ -66,7 +66,7 @@ Read my portfolio of [featured freelance projects](clients.md).
 
 # Availability
 
-My next availabiliy date for full-time work is: 2023-SEP-01.
+Please contact me for information on my availability.
 
 # Technical keywords
 
