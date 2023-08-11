@@ -14,7 +14,7 @@
                 <span>Role: Java consultant, mentor.</span><br/>
                 <span>Tech keywords: Java MicroProfile, Quarkus, OpenShift, Jaeger, Helm.</span><br/>
                 <br/>
-                I developed from scratch a Java EE backend application for corporate risk management.
+                As part of a team I developed a Java EE backend application for corporate financial risk management.
                 I then led the migration of this application to Quarkus and to run on OpenShift.
             </td>
         </tr>
