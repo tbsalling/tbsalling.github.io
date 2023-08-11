@@ -10,17 +10,17 @@
   
 * 20+ years of experience as a freelancer.
 
-* University trained engineer.
+* University trained engineer (M.Sc.E.E).
 
 * Specialized in Java and open source programming. 
 
-* Domain experience from e.g. banking, government, healthcare, defence, maritime and retail.
+* Domain experience from banking, government, healthcare, defence, maritime and retail.
 
 * System integration/backend solutions for large and mission-critical systems, sometimes with a twist of applied mathematics.
 
 * Based near Århus, Denmark.
 
-* Contracting for remote work in Scandinavia and Europe – with traveling for workshops, team meetings, integration sessions, demos, etc.
+* Contracting for remote work in Scandinavia and Europe – with travel for workshops, team meetings, integration sessions, demos, etc.
 
 # Open source projects
 
