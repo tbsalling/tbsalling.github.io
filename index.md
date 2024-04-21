@@ -35,6 +35,7 @@ Both projects have commercial users and are related to decoding of safety- and n
 
 Featured clients that I have worked for:
 
+<img src="images/logo_norlys.svg" style="margin: 15px 15px 15px 15px" />
 <img src="images/logo_jb.jpg" style="margin: 15px 15px 15px 15px" />
 <img src="images/logo_systematic.jpg" style="margin: 15px 15px 15px 15px" />
 <img src="images/logo_bankdata.jpg" style="margin: 15px 15px 15px 15px" />

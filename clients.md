@@ -7,6 +7,19 @@
 <table id="tablepress-1" class="tablepress tablepress-id-1">
     <tbody>
         <tr>
+            <td valign="top" width="20%"><img src="images/logo_norlys.svg" /></td>
+            <td valign="top" width="15%">2023 &ndash; </td>
+            <td>
+                <b><u>Integration of TV streaming services and provisioning of network connections</u>, Norlys.</b><br/>
+                <span>Role: Senior Java developer.</span><br/>
+                <span>Tech keywords: Java MicroProfile, Quarkus, OpenShift, Jaeger, Helm.</span><br/>
+                <br/>
+                As part of a team I developed software to provision TV streaming services and network connections
+                for the more than 1 million private customers of Norlys. I also helped migrating customers from various
+                legacy billing systems to a new single corporate one.
+            </td>
+        </tr>
+        <tr>
             <td valign="top" width="20%"><img src="images/logo_jb.jpg" /></td>
             <td valign="top" width="15%">2020 &ndash; 2023</td>
             <td>
