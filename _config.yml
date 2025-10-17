@@ -7,6 +7,7 @@ plugins:
 title: "Thomas Borg Salling"
 description: "Freelance programmer. Remote Worker. 20+ years of experience in Java and open source programming."
 url: "https://tbsalling.github.io"
+repository: tbsalling/tbsalling.github.io
 author:
   name: "Thomas Borg Salling"
   email: "tbsalling@tbsalling.dk"
