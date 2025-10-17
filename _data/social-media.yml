@@ -3,47 +3,47 @@ phone:
   id: '+45 4063 2353'
   href: 'tel://'
   title: 'Phone'
-  fa-icon: 'fa-phone'
+  fa-icon: 'fa-solid fa-phone'
 
 email:
   enabled: true
   id: 'tbsalling@tbsalling.dk'
   href: 'mailto:'
   title: 'Email'
-  fa-icon: 'fa-envelope-square'
+  fa-icon: 'fa-solid fa-envelope'
 
 github:
   enabled: true
   id: 'tbsalling'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'fa-github-square'
+  fa-icon: 'fa-brands fa-github'
 
 stack-overflow:
   enabled: true
   id: 'tbsalling'
   href: 'https://stackoverflow.com/users/279511/'
   title: 'Stackoverflow'
-  fa-icon: 'fa-stack-overflow'
+  fa-icon: 'fa-brands fa-stack-overflow'
 
 linkedin:
   enabled: true
   id: 'tbsalling'
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
-  fa-icon: 'fa-linkedin'
+  fa-icon: 'fa-brands fa-linkedin'
 
 facebook:
   enabled: false
   id: 'your-facebook-username'
   href: 'https://www.facebook.com/'
   title: 'Facebook'
-  fa-icon: 'fa-facebook-square'
+  fa-icon: 'fa-brands fa-facebook'
 
 twitter:
   enabled: true
   id: 'tbsalling'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
-  fa-icon: 'fa-twitter-square'
+  fa-icon: 'fa-brands fa-twitter'
 

@@ -55,7 +55,7 @@ Read my portfolio of [featured freelance projects](clients.md).
     {% for entry in sm %}
         {% assign key = entry | first %}
         {% if sm[key].enabled and sm[key].id %}
-            <p><a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa fa-xl {{ sm[key].fa-icon }}"></i> {{ sm[key].id }}</a></p>
+            <p><a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="{{ sm[key].fa-icon }} fa-xl"></i> {{ sm[key].id }}</a></p>
         {% endif %}
     {% endfor %}
 </div>
