@@ -1,7 +1,7 @@
 /* TEAM */
 Name: Thomas Borg Salling
 Site: https://tbsalling.dk
-Location: Århus, Denmark
+Location: Hedensted, Denmark
 Email: tbsalling@tbsalling.dk
 GitHub: https://github.com/tbsalling
 LinkedIn: https://www.linkedin.com/in/tbsalling
