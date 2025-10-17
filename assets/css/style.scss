@@ -149,6 +149,7 @@ img[src*="tbs.webp"]:hover {
 /* Content Sections */
 .main-content {
   padding: 2rem 4rem;
+  animation: fadeIn 0.5s ease-in;
 }
 
 @media screen and (max-width: 64em) {
@@ -226,7 +227,6 @@ table td:nth-child(2) {
   width: 120px;
   font-weight: 600;
   color: #159957;
-  white-space: nowrap;
 }
 
 table img {
@@ -260,12 +260,16 @@ table strong {
 
 @media screen and (max-width: 42em) {
   table {
-    display: block;
     overflow-x: auto;
+    display: block;
   }
   
   table td {
     padding: 1rem 0.5rem;
+  }
+  
+  table td:nth-child(2) {
+    width: auto;
   }
 }
 
@@ -281,11 +285,7 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Add subtle animation to page load */
-.main-content {
-  animation: fadeIn 0.5s ease-in;
-}
-
+/* Fade-in animation for page load */
 @keyframes fadeIn {
   from {
     opacity: 0;
