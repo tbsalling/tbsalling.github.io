@@ -196,6 +196,79 @@ code {
   border-radius: 3px;
 }
 
+/* Table styling for projects/clients pages */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+table tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+table tr:hover {
+  background-color: #f9f9f9;
+}
+
+table td {
+  padding: 1.5rem 1rem;
+  vertical-align: top;
+}
+
+table td:first-child {
+  width: 120px;
+  text-align: center;
+}
+
+table td:nth-child(2) {
+  width: 120px;
+  font-weight: 600;
+  color: #159957;
+  white-space: nowrap;
+}
+
+table img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+table strong {
+  color: #159957;
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive table layout */
+@media screen and (max-width: 64em) {
+  table td:first-child {
+    width: 80px;
+  }
+  
+  table td:nth-child(2) {
+    width: 100px;
+  }
+  
+  table img {
+    max-width: 60px;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  table td {
+    padding: 1rem 0.5rem;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -206,4 +279,20 @@ a:focus,
 button:focus {
   outline: 2px solid #159957;
   outline-offset: 2px;
+}
+
+/* Add subtle animation to page load */
+.main-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
