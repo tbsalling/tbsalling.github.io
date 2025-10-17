@@ -1,2 +1,21 @@
 _site
 HOWTO.txt
+
+# Jekyll
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Bundler
+.bundle
+vendor
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~

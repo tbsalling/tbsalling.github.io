@@ -1,7 +1,17 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 title: "Thomas Borg Salling"
-description: [Freelance programmer. Remote Worker.]
+description: "Freelance programmer. Remote Worker. 20+ years of experience in Java and open source programming."
+url: "https://tbsalling.github.io"
+repository: tbsalling/tbsalling.github.io
+author:
+  name: "Thomas Borg Salling"
+  email: "tbsalling@tbsalling.dk"
 markdown: kramdown
 highlighter: rouge
+lang: en
+timezone: Europe/Copenhagen

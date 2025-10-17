@@ -1,0 +1,16 @@
+# Development configuration
+# Use with: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+
+# Disable GitHub metadata for local development
+# This prevents errors when GitHub API is not accessible
+github: [metadata]
+
+# Show drafts and future posts
+show_drafts: true
+future: true
+
+# Faster regeneration
+incremental: true
+
+# Enable detailed error messages
+strict_front_matter: true

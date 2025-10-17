@@ -1,0 +1,12 @@
+/* TEAM */
+Name: Thomas Borg Salling
+Site: https://tbsalling.dk
+Location: Hedensted, Denmark
+Email: tbsalling@tbsalling.dk
+GitHub: https://github.com/tbsalling
+LinkedIn: https://www.linkedin.com/in/tbsalling
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript
+Components: Jekyll, GitHub Pages, Font Awesome
+Software: Ruby, Bundler, Git
