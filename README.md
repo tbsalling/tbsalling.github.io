@@ -24,6 +24,11 @@ Personal website and blog for Thomas Borg Salling - a freelance programmer and r
    ```bash
    bundle exec jekyll serve
    ```
+   
+   For local development with faster builds and development-specific settings:
+   ```bash
+   bundle exec jekyll serve --config _config.yml,_config_dev.yml
+   ```
 
 3. Open your browser to `http://localhost:4000`
 
