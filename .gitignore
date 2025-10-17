@@ -5,7 +5,6 @@ HOWTO.txt
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
-Gemfile.lock
 
 # Bundler
 .bundle
