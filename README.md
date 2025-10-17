@@ -61,5 +61,3 @@ The site includes:
 ## License
 
 Content © Thomas Borg Salling. All rights reserved.
-
-Website code licensed under MIT License - see [LICENSE](LICENSE) file for details.
