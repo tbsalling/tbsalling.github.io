@@ -1,0 +1,209 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom styles for improved graphical appearance */
+
+/* Profile Image Enhancements */
+img[src*="tbs.webp"] {
+  border-radius: 50%;
+  border: 4px solid #159957;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img[src*="tbs.webp"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Media Section Improvements */
+#social-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+#social-media p {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#social-media p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #e0e7ee 0%, #a8bfd1 100%);
+}
+
+#social-media a {
+  text-decoration: none;
+  color: #159957;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#social-media a:hover {
+  color: #106738;
+}
+
+#social-media i {
+  font-size: 1.2em;
+  min-width: 24px;
+}
+
+/* Client Logos Section */
+.page-header + .main-content > p:has(img[src*="logo_"]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+}
+
+.page-header + .main-content > p img[src*="logo_"] {
+  max-width: 150px;
+  height: auto;
+  margin: 0 !important;
+  filter: grayscale(50%);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.page-header + .main-content > p img[src*="logo_"]:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Section Headers */
+.main-content h1 {
+  color: #159957;
+  border-bottom: 2px solid #159957;
+  padding-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-content h1:first-of-type {
+  margin-top: 0;
+}
+
+/* Lists Enhancement */
+.main-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-content ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.main-content ul li::before {
+  content: "▸";
+  color: #159957;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Links Enhancement */
+.main-content a {
+  color: #159957;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.main-content a:hover {
+  color: #106738;
+  border-bottom: 1px solid #159957;
+}
+
+/* Page Header Enhancement */
+.page-header {
+  background: linear-gradient(120deg, #155799, #159957, #159966);
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content Sections */
+.main-content {
+  padding: 2rem 4rem;
+}
+
+@media screen and (max-width: 64em) {
+  .main-content {
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  
+  #social-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card-like sections for better visual separation */
+.main-content > h1 + p,
+.main-content > h1 + ul {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #159957;
+  margin-bottom: 2rem;
+}
+
+/* Footer enhancement */
+.site-footer {
+  border-top: 2px solid #159957;
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Improve code blocks if any */
+pre {
+  border-radius: 8px;
+  border-left: 4px solid #159957;
+}
+
+code {
+  background-color: #f5f7fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus states for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #159957;
+  outline-offset: 2px;
+}
