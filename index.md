@@ -107,3 +107,5 @@ Please contact me for information on my availability.
 * [Creating, sharing and running a Docker image to decode AIS messages](./blog_002_ais_decoder_docker.html)
 * [Running AISdecoder in a Kubernetes cluster on AWS](./blog_003_ais_decoder_kubernetes.html)
 * [Introducing Java modules in AISmessages](./blog_004_ais_messages_java_modules.html)
+* [Why AISmessages 4.0 made value objects immutable](./blog_005_aismessages_major_v4.html)
+* [AIS Application-Specific Messages: Beyond Standard Position Reports](./blog_006_application_specific_messages.html)
