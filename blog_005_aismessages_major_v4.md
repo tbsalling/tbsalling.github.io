@@ -62,6 +62,9 @@ When upgrading to AISmessages v4, keep the following in mind:
 Here's a simple example showing how to work with the new immutable value objects:
 
 {% highlight java %}
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 // Parse NMEA message to get immutable AIS message
 AISMessage message = NMEAMessage.fromString(
     "!AIVDM,1,1,,A,18UG;P0012G?Uq4EdHa=c;7@051@,0*53"
@@ -73,6 +76,7 @@ messageSet.add(message);
 
 // Thread-safe - can be safely shared across threads
 // No defensive copying needed
+ExecutorService executor = Executors.newFixedThreadPool(4);
 executor.submit(() -> processMessage(message));
 
 // Values are accessible but cannot be modified
@@ -94,21 +98,23 @@ The key changes in AISmessages v4.0.0:
 
 ## Migration example
 
-If you were previously using mutable AIS messages:
+In v3, message objects were mutable and parsing was embedded in the objects themselves:
 
 {% highlight java %}
-// OLD v3 approach (mutable - no longer supported)
+// OLD v3 approach - messages were mutable
 AISMessage message = parser.parse(nmea);
-// Fields could be modified after creation
+// Note: In v3, the API was different and the architecture mixed
+// parsing logic with data representation
 {% endhighlight %}
 
-You now work with immutable objects:
+In v4, messages are immutable value objects with separated parsing:
 
 {% highlight java %}
-// NEW v4 approach (immutable)
+// NEW v4 approach - immutable value objects
 AISMessage message = parser.parse(nmea);
-// All fields are final and cannot be changed
-// To work with different values, create new instances
+// All fields are final - cannot be modified after creation
+// equals() and hashCode() work correctly for collections
+// No need for defensive copying in multi-threaded code
 {% endhighlight %}
 
 ## Benefits in practice
