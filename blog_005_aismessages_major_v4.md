@@ -1,9 +1,7 @@
 ---
-layout: post
 title: "Why AISmessages 4.0 made value objects immutable"
 description: "Rationale behind datatype and mutability changes in AISmessages v4.0.0"
 date: 2025-10-19 07:35:26 +0000
-tags: [AISmessages, Java, Immutability, Design]
 categories: AIS
 ---
 
