@@ -97,7 +97,14 @@ img[src*="tbs.webp"]:hover {
 }
 
 .main-content h1:first-of-type {
-  margin-top: 0;
+  margin-top: 23;
+}
+
+/* Homepage: align first H1 underline with profile portrait center */
+@media screen and (min-width: 42em) {
+  #profile-portrait + h1 {
+    margin-top: 6.5rem;
+  }
 }
 
 /* Lists Enhancement */

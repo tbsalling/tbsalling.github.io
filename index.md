@@ -2,9 +2,9 @@
 {% include clarity.html %}
 {% include font.html %}
 
-<img src="images/tbs.webp" style="float: right" width="25%" height="25%" />
+<img id="profile-portrait" src="images/tbs.webp" style="float: right" width="25%" height="25%" />
 
-# Freelance senior Java architect & developer
+# Freelance Java architect & developer
 
 I help organizations ship and modernize **mission‑critical Java backend systems** — quickly and safely — through Java, sound architecture, and responsible AI‑assisted engineering.
 
