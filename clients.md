@@ -4,6 +4,8 @@
 
 # Featured Projects
 
+Selected freelance projects across finance, telecom, healthcare, defence and maritime — spanning both greenfield and brownfield work.
+
 <table id="tablepress-1" class="tablepress tablepress-id-1">
     <tbody>
         <tr>

@@ -12,15 +12,38 @@
 
 * University trained engineer (M.Sc.E.E).
 
-* Specialized in Java and open source programming. 
+* Specialized in Java and open source programming.
 
-* Domain experience from banking, government, healthcare, defence, maritime and retail.
+* Senior freelance Java architect/developer — AI‑accelerated greenfield & modernization.
+
+* Domain experience across finance, telecom, healthcare, defence and maritime.
 
 * System integration/backend solutions for large and mission-critical systems, sometimes with a twist of applied mathematics.
 
 * Based near Århus, Denmark.
 
 * Contracting for remote work in Scandinavia and Europe – with travel for workshops, team meetings, integration sessions, demos, etc.
+
+# What I do
+
+* Software architecture and backend development (Java)
+* System integration and API design (REST/OpenAPI)
+* Greenfield delivery: new services, platforms and domain models
+* Brownfield delivery: modernization, migrations, refactoring and platform moves
+* Cloud/container platforms and observability (e.g. OpenShift, Docker, tracing)
+
+# Greenfield & brownfield
+
+* Greenfield: clarify requirements, establish architecture, build the first production-grade baseline fast.
+* Brownfield: reduce risk while modernizing—migrations, modularization, performance, and integration improvements.
+
+# How I work (AI-accelerated)
+
+I use GitHub Copilot and Claude Code as a productivity and quality multiplier for design exploration, implementation, refactoring, tests, and reviews—always with human judgment, code review, and automated testing.
+
+# Confidentiality & responsible AI use
+
+I use AI tools responsibly to accelerate delivery, but I never share confidential client information. I follow client security policies and treat AI output as suggestions that are reviewed and tested before use.
 
 # Open source projects
 
@@ -67,7 +90,7 @@ Read my portfolio of [featured freelance projects](clients.md).
 
 # Availability
 
-Please contact me for information on my availability.
+Recruiters, enterprises and agencies: please contact me for information on my availability.
 
 # Technical keywords
 
@@ -99,6 +122,11 @@ Please contact me for information on my availability.
 * Build tools
     * Gradle
     * Maven
+
+* AI-accelerated engineering
+    * GitHub Copilot
+    * Claude Code
+    * AI-assisted refactoring, testing and code reviews (human-in-the-loop)
 
 # Posts
 

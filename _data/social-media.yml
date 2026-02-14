@@ -41,7 +41,7 @@ facebook:
   fa-icon: 'fa-brands fa-facebook'
 
 twitter:
-  enabled: true
+  enabled: false
   id: 'tbsalling'
   href: 'https://www.twitter.com/'
   title: 'Twitter'
