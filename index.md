@@ -4,7 +4,7 @@
 
 <img src="images/tbs.webp" style="float: right" width="25%" height="25%" />
 
-# Senior Java backend architect & developer (freelance, AI‑accelerated)
+# Freelance senior Java architect & developer
 
 I help organizations ship and modernize **mission‑critical Java backend systems** — quickly and safely — through Java, sound architecture, and responsible AI‑assisted engineering.
 

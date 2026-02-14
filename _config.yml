@@ -5,7 +5,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 title: "Thomas Borg Salling"
-description: "Senior freelance Java architect & developer — AI‑accelerated delivery for mission‑critical Java backend systems (greenfield & modernization)."
+description: "Senior freelance Java architect & developer<br />AI‑accelerated delivery for mission‑critical Java backend systems"
 url: "https://tbsalling.github.io"
 repository: tbsalling/tbsalling.github.io
 author:
