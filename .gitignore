@@ -19,3 +19,7 @@ vendor
 *.swp
 *.swo
 *~
+
+# Claude
+.gitignore
+
