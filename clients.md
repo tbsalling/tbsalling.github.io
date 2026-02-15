@@ -10,7 +10,7 @@ Selected freelance engagements across finance, telecom, healthcare, defence and 
     <tbody>
         <tr>
             <td valign="top" width="20%"><img src="images/logo_norlys.svg" /></td>
-            <td valign="top" width="15%">2023 &ndash; </td>
+            <td valign="top" width="15%">2023 &ndash; 2025</td>
             <td>
                 <b><u>Integration of TV streaming services and provisioning of network connections</u>, Norlys.</b><br/>
                 <span>Role: Senior Java developer (freelance).</span><br/>
