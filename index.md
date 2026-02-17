@@ -24,7 +24,7 @@ I help organizations ship and modernize **mission‑critical Java backend system
 
 ## How I work
 
-I work AI-accelerated and use **GitHub Copilot** and **Claude Code** as a productivity and quality multiplier for design exploration, implementation, refactoring, tests, and reviews. But I am the human-in-the-loop and I apply **25+ years of Java engineering experience** — to use AI critically: validate assumptions, catch edge cases, and keep designs operable. The final result is always reviewed and tested.
+I use **GitHub Copilot** and **Claude Code** as productivity multipliers across design, implementation, refactoring, and reviews. My relationship with machine learning predates the current wave — my master's thesis explored constrained Markov networks — so I understand the technology behind the tools, not just the tools themselves. Combined with **25+ years of Java experience**, this lets me use AI critically: validate assumptions, catch edge cases, and keep designs operable. All work is reviewed and tested.
 
 ## Open source projects
 
