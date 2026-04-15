@@ -186,6 +186,16 @@ img[src*="tbs.webp"]:hover {
   color: #8892a4;
 }
 
+.page-header .project-tagline .slogan {
+  display: block;
+  margin-top: 0.75rem;
+  color: #d4a853;
+  font-style: italic;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  opacity: 0.92;
+}
+
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -259,6 +269,14 @@ code {
 .main-content blockquote {
   border-left-color: #d4a853;
   color: #8892a4;
+}
+
+.slogan-body {
+  margin: 1.5rem 0 2rem 0;
+  font-style: italic;
+  font-size: 1.1em;
+  color: #d4a853;
+  letter-spacing: 0.05em;
 }
 
 /* Table styling for projects/clients pages */

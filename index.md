@@ -4,27 +4,29 @@
 
 <img id="profile-portrait" src="images/tbs.webp" style="float: right" width="25%" height="25%" />
 
-# Freelance Java architect & developer
+# Freelance Java architect & systems integrator
 
-I help organizations ship and modernize **mission‑critical Java backend systems** — quickly and safely — through Java, sound architecture, and responsible AI‑assisted engineering.
+I help organizations **integrate and modernize mission‑critical Java backend systems** — connecting silos, unlocking data flows, and turning fragmented architectures into coherent, high‑value platforms — through Java, sound architecture, and responsible AI‑assisted engineering.
+
+<p class="slogan-body">Systems integrated. Value unlocked.</p>
 
 * **Freelance / remote-first** (based near Århus/Aarhus, Denmark)
 * **25+ years** of software development and architecture experience — primarily Java and backend systems
 * M.Sc. in Electrical Engineering (M.Sc.E.E.)
-* Strong focus on **integration, security, performance, reliability, and operability**
+* Strong focus on **integration, value delivery, security, performance, reliability, and operability**
 * Broad domain experience in e.g. finance, telecom, healthcare, defence and maritime
 
 ## What I do
 
    - Architecture and delivery of Java backend services (greenfield + modernization)
-   - Integration and API delivery (REST/OpenAPI, messaging)
+   - System integration and API design (REST/OpenAPI, messaging, event-driven)
    - Cloud/container deployment (OpenShift/Kubernetes, Docker)
    - Security and performance engineering for backend systems
    - Technical leadership: teaching, mentoring, review, sparring
 
 ## How I work
 
-I use **GitHub Copilot** and **Claude Code** as productivity multipliers across design, implementation, refactoring, and reviews. My relationship with machine learning predates the current wave — my master's thesis explored constrained Markov networks — so I understand the technology behind the tools, not just the tools themselves. Combined with **25+ years of Java experience**, this lets me use AI critically: validate assumptions, catch edge cases, and keep designs operable. All work is reviewed and tested.
+I use **GitHub Copilot** and **Claude Code** as productivity multipliers — accelerating integration work, refactoring, and reviews without cutting corners on quality. My relationship with machine learning predates the current wave — my master's thesis explored constrained Markov networks — so I understand the technology behind the tools, not just the tools themselves. Combined with **25+ years of Java experience**, this lets me use AI critically: validate assumptions, catch edge cases, and keep integrated systems operable. All work is reviewed and tested.
 
 ## Open source projects
 
