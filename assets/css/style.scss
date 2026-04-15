@@ -279,6 +279,47 @@ code {
   letter-spacing: 0.05em;
 }
 
+/* Technical keywords tag pills */
+.tech-keywords {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.tech-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.tech-category {
+  color: #d4a853;
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 10rem;
+  margin-right: 0.25rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #222838;
+  border: 1px solid #2d3548;
+  color: #c8cdd8;
+  font-size: 0.82em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  border-color: #d4a853;
+  color: #e0e4ec;
+}
+
 /* Table styling for projects/clients pages */
 table {
   border-collapse: collapse;
