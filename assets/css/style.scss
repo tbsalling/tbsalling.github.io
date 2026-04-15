@@ -283,25 +283,30 @@ code {
 .tech-keywords {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
   margin: 1rem 0 2rem 0;
 }
 
 .tech-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  align-items: start;
   gap: 0.4rem;
 }
 
 .tech-category {
   color: #d4a853;
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: 0.75em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  min-width: 10rem;
-  margin-right: 0.25rem;
+  letter-spacing: 0.07em;
+  padding-top: 0.25rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .tag {
@@ -318,6 +323,13 @@ code {
 .tag:hover {
   border-color: #d4a853;
   color: #e0e4ec;
+}
+
+@media screen and (max-width: 42em) {
+  .tech-group {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
 }
 
 /* Table styling for projects/clients pages */

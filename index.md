@@ -80,61 +80,73 @@ Recruiters, enterprises and agencies: contact me for current availability and a 
 <div class="tech-keywords">
   <div class="tech-group">
     <span class="tech-category">Java &amp; frameworks</span>
-    <span class="tag">Java SE</span>
-    <span class="tag">Java EE</span>
-    <span class="tag">JPMS</span>
-    <span class="tag">MicroProfile</span>
-    <span class="tag">Quarkus</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">Hibernate</span>
-    <span class="tag">JPA</span>
-    <span class="tag">CDI</span>
-    <span class="tag">JTA</span>
+    <div class="tag-list">
+      <span class="tag">Java SE</span>
+      <span class="tag">Java EE</span>
+      <span class="tag">JPMS</span>
+      <span class="tag">MicroProfile</span>
+      <span class="tag">Quarkus</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Hibernate</span>
+      <span class="tag">JPA</span>
+      <span class="tag">CDI</span>
+      <span class="tag">JTA</span>
+    </div>
   </div>
   <div class="tech-group">
     <span class="tech-category">APIs &amp; integration</span>
-    <span class="tag">REST</span>
-    <span class="tag">OpenAPI</span>
-    <span class="tag">Messaging</span>
-    <span class="tag">Apache Camel</span>
-    <span class="tag">NATS</span>
-    <span class="tag">ActiveMQ</span>
-    <span class="tag">AMQP</span>
-    <span class="tag">Keycloak</span>
-    <span class="tag">OIDC</span>
-    <span class="tag">JWT</span>
+    <div class="tag-list">
+      <span class="tag">REST</span>
+      <span class="tag">OpenAPI</span>
+      <span class="tag">Messaging</span>
+      <span class="tag">Apache Camel</span>
+      <span class="tag">NATS</span>
+      <span class="tag">ActiveMQ</span>
+      <span class="tag">AMQP</span>
+      <span class="tag">Keycloak</span>
+      <span class="tag">OIDC</span>
+      <span class="tag">JWT</span>
+    </div>
   </div>
   <div class="tech-group">
     <span class="tech-category">Cloud &amp; ops</span>
-    <span class="tag">OpenShift</span>
-    <span class="tag">Kubernetes</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Helm</span>
-    <span class="tag">Istio</span>
-    <span class="tag">AWS</span>
-    <span class="tag">Jaeger</span>
+    <div class="tag-list">
+      <span class="tag">OpenShift</span>
+      <span class="tag">Kubernetes</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Helm</span>
+      <span class="tag">Istio</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Jaeger</span>
+    </div>
   </div>
   <div class="tech-group">
     <span class="tech-category">Data</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">Oracle</span>
-    <span class="tag">MS SQL Server</span>
-    <span class="tag">Cassandra</span>
-    <span class="tag">PostGIS</span>
+    <div class="tag-list">
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Oracle</span>
+      <span class="tag">MS SQL Server</span>
+      <span class="tag">Cassandra</span>
+      <span class="tag">PostGIS</span>
+    </div>
   </div>
   <div class="tech-group">
     <span class="tech-category">Build &amp; testing</span>
-    <span class="tag">Maven</span>
-    <span class="tag">Gradle</span>
-    <span class="tag">Jenkins</span>
+    <div class="tag-list">
+      <span class="tag">Maven</span>
+      <span class="tag">Gradle</span>
+      <span class="tag">Jenkins</span>
+    </div>
   </div>
   <div class="tech-group">
     <span class="tech-category">AI&#8209;accelerated engineering</span>
-    <span class="tag">GitHub Copilot</span>
-    <span class="tag">Claude Code</span>
-    <span class="tag">AI&#8209;assisted refactoring</span>
-    <span class="tag">AI&#8209;assisted reviews</span>
-    <span class="tag">human&#8209;in&#8209;the&#8209;loop</span>
+    <div class="tag-list">
+      <span class="tag">GitHub Copilot</span>
+      <span class="tag">Claude Code</span>
+      <span class="tag">AI&#8209;assisted refactoring</span>
+      <span class="tag">AI&#8209;assisted reviews</span>
+      <span class="tag">human&#8209;in&#8209;the&#8209;loop</span>
+    </div>
   </div>
 </div>
 
