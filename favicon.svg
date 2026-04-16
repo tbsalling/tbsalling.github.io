@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>TBS favicon</title>
+  <rect width="64" height="64" rx="12" fill="#1a1f2e"/>
+  <rect x="3" y="3" width="58" height="58" rx="9" fill="none" stroke="#d4a853" stroke-width="2.5"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#d4a853" letter-spacing="-1.5">TBS</text>
+</svg>
