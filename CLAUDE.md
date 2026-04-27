@@ -7,7 +7,7 @@ This is the personal website of Thomas Borg Salling, Senior Freelance Java Archi
 - Pure static HTML/CSS/JS — no build tools, no npm, no frameworks
 - Fonts: Space Grotesk + JetBrains Mono (Google Fonts CDN)
 - Icons: Font Awesome 6 (CDN, contact section only)
-- Favicon: `favicon.svg` (<TBS/> mark, cyan on dark slate)
+- Favicon: `favicon.svg` (<T/> mark, cyan on dark slate)
 
 ## File structure
 
