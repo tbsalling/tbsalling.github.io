@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tbsalling.github.io/sitemap.xml

@@ -1,63 +1,50 @@
-# Thomas Borg Salling - Personal Website
+# tbsalling.dk
 
-This is the source repository for [tbsalling.github.io](https://tbsalling.github.io), a personal website built with Jekyll and hosted on GitHub Pages.
+Static personal website for Thomas Borg Salling, hosted with GitHub Pages.
 
-## About
+## Overview
 
-Personal website and blog for Thomas Borg Salling - a freelance programmer and remote worker specializing in Java and open source programming.
+This repository is intentionally simple:
 
-## Development
+- `index.html` is the home page.
+- `clients.html` is the portfolio page.
+- `images/` contains portraits and client logos.
+- `favicon.svg` is the site icon.
+- `CNAME` points GitHub Pages at `tbsalling.dk`.
 
-### Prerequisites
+There is no build step, package manager, framework, or generated asset pipeline. The pages are plain HTML with inline CSS and JavaScript.
 
-- Ruby 3.x
-- Bundler
+## Local Preview
 
-### Local Setup
-
-1. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-2. Run the site locally:
-   ```bash
-   bundle exec jekyll serve
-   ```
-   
-   For local development with faster builds and development-specific settings:
-   ```bash
-   bundle exec jekyll serve --config _config.yml,_config_dev.yml
-   ```
-
-3. Open your browser to `http://localhost:4000`
-
-### Building
-
-To build the site without running a server:
+Run a local static server from the repository root:
 
 ```bash
-bundle exec jekyll build
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-The built site will be in the `_site` directory.
+Then open:
 
-## Technology Stack
+```text
+http://127.0.0.1:4173/index.html
+http://127.0.0.1:4173/clients.html
+```
 
-- **Jekyll**: Static site generator
-- **GitHub Pages**: Hosting platform
-- **Cayman Theme**: Jekyll theme
-- **Font Awesome**: Icons
-- **Google Analytics & Microsoft Clarity**: Analytics
+Opening the HTML files directly also works for most edits, but using a local server is closer to how GitHub Pages serves the site.
 
-## Content
+## Editing Notes
 
-The site includes:
-- Personal portfolio and CV information
-- Blog posts about AIS (Automatic Identification System) and maritime software
-- Featured client list
-- Open source project information
+- Keep internal links relative, such as `clients.html` and `index.html#contact`.
+- Keep image paths relative to the repo root, such as `images/tbs.webp`.
+- Keep the site dependency-free unless there is a clear reason to add tooling.
+- The home page and portfolio page use CSS scroll snapping; test desktop and mobile after layout changes.
+- `CLAUDE.md` documents the visual system and common editing patterns.
 
-## License
+## Publishing
 
-Content © Thomas Borg Salling. All rights reserved.
+GitHub Pages serves the site from the repository root on the main branch. To publish changes:
+
+```bash
+git add .
+git commit -m "Update site"
+git push origin main
+```

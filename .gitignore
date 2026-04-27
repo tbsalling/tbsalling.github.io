@@ -1,25 +1,12 @@
-_site
-HOWTO.txt
-
-# Jekyll
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-
-# Bundler
-.bundle
-vendor
-
-# macOS
+# OS
 .DS_Store
+Thumbs.db
 
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-*~
+# Editor
+.vscode/
+.idea/
 
-# Claude
-.gitignore
-
+# Misc
+*.log
+.bundle/
+logo-concepts.html

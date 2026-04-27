@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:linkedin.com)",
+      "Bash(ls:*)",
+      "Bash(bundle update:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(ruby --version)",
+      "Bash(bundle --version)",
+      "Bash(rbenv versions:*)",
+      "Bash(rvm list:*)",
+      "Bash(rbenv exec:*)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(cp \"/Users/tbsalling/.claude/projects/-Users-tbsalling-Documents-src-github-tbsalling-github-io/65cdd394-15a5-4682-9df0-7861c95d12b4/tool-results/webfetch-1777314040606-uabqcu.bin\" /tmp/design.gz)",
+      "Bash(gunzip -f /tmp/design.gz)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p /tmp/design_extracted)",
+      "Bash(tar -xf /tmp/design -C /tmp/design_extracted)",
+      "Bash(xargs kill *)",
+      "Bash(python3 -m http.server 9876)",
+      "Bash(curl -s http://localhost:9876/)"
+    ]
+  }
+}
