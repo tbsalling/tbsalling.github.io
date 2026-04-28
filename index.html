@@ -200,13 +200,13 @@ section + section { border-top: 1px solid var(--border); }
   border-radius: 2px;
   margin-bottom: 1.4rem;
   letter-spacing: 0.06em;
-  white-space: nowrap;
 }
 .pulse-dot {
   width: 5px; height: 5px;
   border-radius: 50%;
   background: var(--accent);
   flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse {
   0%,100% { opacity: 1; transform: scale(1); }
@@ -219,7 +219,6 @@ h1.hero-name {
   line-height: 1.05;
   letter-spacing: -0.04em;
   margin-bottom: 0.5rem;
-  white-space: nowrap;
 }
 .hero-role {
   font-size: clamp(0.88rem, 1.2vw, 1rem);
@@ -851,7 +850,7 @@ footer {
   section { padding: 70px 1.1rem 2.5rem; }
   .skills-grid { grid-template-columns: 1fr; }
   .logo-grid { grid-template-columns: repeat(3, 1fr); }
-  .hero-stats { gap: 1.2rem; }
+  .hero-stats { gap: 1.2rem; flex-wrap: wrap; justify-content: space-between; }
 }
 
 /* ─── TWEAKS PANEL ────────────────────────────── */
