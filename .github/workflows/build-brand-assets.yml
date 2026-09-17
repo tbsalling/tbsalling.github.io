@@ -45,6 +45,12 @@ jobs:
           lock_site=$(convert qa/lockup.png -crop 1220x240+550+40 +repage -trim -format '%w' info:)
           lock_slogan=$(convert qa/lockup.png -crop 1220x140+550+285 +repage -trim -format '%w' info:)
           printf 'text-only site=%s slogan=%s\nlockup site=%s slogan=%s\n' "$text_site" "$text_slogan" "$lock_site" "$lock_slogan" | tee qa/width-report.txt
+          text_delta=$(( text_site > text_slogan ? text_site - text_slogan : text_slogan - text_site ))
+          lock_delta=$(( lock_site > lock_slogan ? lock_site - lock_slogan : lock_slogan - lock_site ))
+          if [ "$text_delta" -gt 2 ] || [ "$lock_delta" -gt 2 ]; then
+            echo "QA failed: visible line widths differ by more than 2 px" >&2
+            exit 1
+          fi
           find . -type f | sort > FILES.txt
       - name: Upload package
         uses: actions/upload-artifact@v4
