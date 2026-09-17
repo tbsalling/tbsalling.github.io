@@ -53,7 +53,7 @@ jobs:
                           check=True,
                       )
                       geometry = subprocess.check_output(
-                          ["convert", tmp.name, "-trim", "-format", "%@", "info:"],
+                          ["convert", tmp.name, "-trim", "-format", "%w %h %X %Y", "info:"],
                           text=True,
                       ).strip()
                   g = geo_re.fullmatch(geometry)
@@ -75,10 +75,10 @@ jobs:
             tmp=$(mktemp --suffix=.png)
             rsvg-convert -w 2000 "$svg" -o "$tmp"
             dims=$(identify -format '%wx%h' "$tmp")
-            bounds=$(convert "$tmp" -trim -format '%@' info:)
+            bounds=$(convert "$tmp" -trim -format '%wx%h' info:)
             printf '%s dimensions=%s bounds=%s\n' "$svg" "$dims" "$bounds" >> qa/svg-margin-report.txt
             rm -f "$tmp"
-            if [ "$bounds" != "${dims}+0+0" ]; then
+            if [ "$bounds" != "$dims" ]; then
               echo "QA failed: blank outer SVG margin in $svg ($dims vs $bounds)" >&2
               exit 1
             fi
@@ -117,9 +117,9 @@ jobs:
           : > qa/margin-report.txt
           while IFS= read -r image; do
             dims=$(identify -format '%wx%h' "$image")
-            bounds=$(convert "$image" -trim -format '%@' info:)
+            bounds=$(convert "$image" -trim -format '%wx%h' info:)
             printf '%s dimensions=%s bounds=%s\n' "$image" "$dims" "$bounds" >> qa/margin-report.txt
-            if [ "$bounds" != "${dims}+0+0" ]; then
+            if [ "$bounds" != "$dims" ]; then
               echo "QA failed: blank outer margin in $image ($dims vs $bounds)" >&2
               exit 1
             fi
