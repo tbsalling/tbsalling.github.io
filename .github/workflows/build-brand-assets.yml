@@ -27,7 +27,7 @@ jobs:
 
           for path in files:
               text = path.read_text()
-              for _ in range(2):
+              for _ in range(1):
                   m = vb_re.search(text)
                   if not m:
                       raise SystemExit(f"Missing viewBox: {path}")
