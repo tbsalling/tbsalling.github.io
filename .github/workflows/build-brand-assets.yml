@@ -41,7 +41,7 @@ jobs:
 
           for path in files:
               text = path.read_text()
-              for _ in range(3):
+              for iteration in range(3):
                   m = vb_re.search(text)
                   if not m:
                       raise SystemExit(f"Missing viewBox: {path}")
@@ -63,6 +63,10 @@ jobs:
                   sx, sy = vw / rw, vh / rh
                   nvx, nvy = vx + ox * sx, vy + oy * sy
                   nvw, nvh = tw * sx, th * sy
+                  if iteration == 2:
+                      inset_x, inset_y = 0.75 * sx, 0.75 * sy
+                      nvx, nvy = nvx + inset_x, nvy + inset_y
+                      nvw, nvh = nvw - 2 * inset_x, nvh - 2 * inset_y
                   replacement = f'viewBox="{nvx:.4f} {nvy:.4f} {nvw:.4f} {nvh:.4f}"'
                   text = vb_re.sub(replacement, text, count=1)
                   print(f"trim-svg {path}: old={vx:.4f},{vy:.4f},{vw:.4f},{vh:.4f} pixels={geometry} new={nvx:.4f},{nvy:.4f},{nvw:.4f},{nvh:.4f}")
