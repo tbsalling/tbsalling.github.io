@@ -16,7 +16,7 @@ jobs:
         run: |
           set -euo pipefail
           cd brand-assets
-          mkdir -p png/mark png/wordmark png/lockup png/text-only favicon social
+          mkdir -p png/mark png/wordmark png/lockup png/text-only favicon social qa
           for v in dark light; do
             for s in 16 32 48 180 192 256 512 1024; do
               rsvg-convert -w "$s" -h "$s" "svg/mark-$v.svg" -o "png/mark/mark-$v-${s}.png"
@@ -38,6 +38,13 @@ jobs:
           {"name":"Thomas Borg Salling","short_name":"tbsalling.dk","icons":[{"src":"android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#070B12","background_color":"#070B12","display":"standalone"}
           EOF
           convert -size 1200x630 xc:'#070B12' \( png/lockup/lockup-dark-1280.png -resize 1000x \) -gravity center -composite social/og-image-1200x630.png
+          rsvg-convert -w 1500 -h 430 svg/text-only-dark.svg -o qa/text-only.png
+          rsvg-convert -w 1800 -h 560 svg/lockup-dark.svg -o qa/lockup.png
+          text_site=$(convert qa/text-only.png -crop 1450x220+20+10 +repage -trim -format '%w' info:)
+          text_slogan=$(convert qa/text-only.png -crop 1450x150+20+230 +repage -trim -format '%w' info:)
+          lock_site=$(convert qa/lockup.png -crop 1220x240+550+40 +repage -trim -format '%w' info:)
+          lock_slogan=$(convert qa/lockup.png -crop 1220x140+550+285 +repage -trim -format '%w' info:)
+          printf 'text-only site=%s slogan=%s\nlockup site=%s slogan=%s\n' "$text_site" "$text_slogan" "$lock_site" "$lock_slogan" | tee qa/width-report.txt
           find . -type f | sort > FILES.txt
       - name: Upload package
         uses: actions/upload-artifact@v4
