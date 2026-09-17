@@ -65,6 +65,7 @@ jobs:
                   nvw, nvh = tw * sx, th * sy
                   replacement = f'viewBox="{nvx:.4f} {nvy:.4f} {nvw:.4f} {nvh:.4f}"'
                   text = vb_re.sub(replacement, text, count=1)
+                  print(f"trim-svg {path}: old={vx:.4f},{vy:.4f},{vw:.4f},{vh:.4f} pixels={geometry} new={nvx:.4f},{nvy:.4f},{nvw:.4f},{nvh:.4f}")
                   path.write_text(text)
           PY
 
