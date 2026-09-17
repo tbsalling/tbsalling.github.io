@@ -11,22 +11,64 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install renderers
         run: sudo apt-get update && sudo apt-get install -y librsvg2-bin imagemagick
-      - name: Render assets
+      - name: Render, trim and QA assets
         shell: bash
         run: |
           set -euo pipefail
           cd brand-assets
           mkdir -p png/mark png/wordmark png/lockup png/text-only favicon social qa
+
+          python3 - <<'PY'
+          import math, pathlib, re, subprocess, tempfile
+
+          files = sorted(pathlib.Path("svg").glob("*.svg")) + [pathlib.Path("favicon.svg")]
+          vb_re = re.compile(r'viewBox="([\d.+-]+)\s+([\d.+-]+)\s+([\d.+-]+)\s+([\d.+-]+)"')
+          geo_re = re.compile(r'(\d+)x(\d+)\+(\d+)\+(\d+)')
+
+          for path in files:
+              text = path.read_text()
+              for _ in range(2):
+                  m = vb_re.search(text)
+                  if not m:
+                      raise SystemExit(f"Missing viewBox: {path}")
+                  vx, vy, vw, vh = map(float, m.groups())
+                  rw, rh = max(1, math.ceil(vw)), max(1, math.ceil(vh))
+                  with tempfile.NamedTemporaryFile(suffix=".png") as tmp:
+                      subprocess.run(
+                          ["rsvg-convert", "-w", str(rw), "-h", str(rh), str(path), "-o", tmp.name],
+                          check=True,
+                      )
+                      geometry = subprocess.check_output(
+                          ["convert", tmp.name, "-trim", "-format", "%@", "info:"],
+                          text=True,
+                      ).strip()
+                  g = geo_re.fullmatch(geometry)
+                  if not g:
+                      raise SystemExit(f"Cannot measure {path}: {geometry}")
+                  tw, th, ox, oy = map(int, g.groups())
+                  sx, sy = vw / rw, vh / rh
+                  nvx, nvy = vx + ox * sx, vy + oy * sy
+                  nvw, nvh = tw * sx, th * sy
+                  replacement = f'viewBox="{nvx:.4f} {nvy:.4f} {nvw:.4f} {nvh:.4f}"'
+                  text = vb_re.sub(replacement, text, count=1)
+                  path.write_text(text)
+          PY
+
           for v in dark light; do
             for s in 16 32 48 180 192 256 512 1024; do
               rsvg-convert -w "$s" -h "$s" "svg/mark-$v.svg" -o "png/mark/mark-$v-${s}.png"
+              mogrify -trim +repage "png/mark/mark-$v-${s}.png"
             done
             for s in 320 640 1280 2560; do
               rsvg-convert -w "$s" "svg/wordmark-$v.svg" -o "png/wordmark/wordmark-$v-${s}.png"
               rsvg-convert -w "$s" "svg/lockup-$v.svg" -o "png/lockup/lockup-$v-${s}.png"
               rsvg-convert -w "$s" "svg/text-only-$v.svg" -o "png/text-only/text-only-$v-${s}.png"
+              mogrify -trim +repage "png/wordmark/wordmark-$v-${s}.png"
+              mogrify -trim +repage "png/lockup/lockup-$v-${s}.png"
+              mogrify -trim +repage "png/text-only/text-only-$v-${s}.png"
             done
           done
+
           cp favicon.svg favicon/favicon.svg
           rsvg-convert -w 16 -h 16 favicon.svg -o favicon/favicon-16x16.png
           rsvg-convert -w 32 -h 32 favicon.svg -o favicon/favicon-32x32.png
@@ -37,13 +79,15 @@ jobs:
           cat > favicon/site.webmanifest <<'EOF'
           {"name":"Thomas Borg Salling","short_name":"tbsalling.dk","icons":[{"src":"android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#070B12","background_color":"#070B12","display":"standalone"}
           EOF
-          convert -size 1200x630 xc:'#070B12' \( png/lockup/lockup-dark-1280.png -resize 1000x \) -gravity center -composite social/og-image-1200x630.png
-          rsvg-convert -w 1500 -h 430 svg/text-only-dark.svg -o qa/text-only.png
-          rsvg-convert -w 1800 -h 560 svg/lockup-dark.svg -o qa/lockup.png
-          text_site=$(convert qa/text-only.png -crop 1450x220+20+10 +repage -trim -format '%w' info:)
-          text_slogan=$(convert qa/text-only.png -crop 1450x150+20+230 +repage -trim -format '%w' info:)
-          lock_site=$(convert qa/lockup.png -crop 1220x240+550+40 +repage -trim -format '%w' info:)
-          lock_slogan=$(convert qa/lockup.png -crop 1220x140+550+285 +repage -trim -format '%w' info:)
+
+          convert -size 1200x630 xc:'#070B12' \( png/lockup/lockup-dark-1280.png -resize '1200x630^' \) -gravity center -composite social/og-image-1200x630.png
+
+          rsvg-convert -w 1500 svg/text-only-dark.svg -o qa/text-only.png
+          rsvg-convert -w 1800 svg/lockup-dark.svg -o qa/lockup.png
+          text_site=$(convert qa/text-only.png -crop 1450x220+0+0 +repage -trim -format '%w' info:)
+          text_slogan=$(convert qa/text-only.png -crop 1450x170+0+220 +repage -trim -format '%w' info:)
+          lock_site=$(convert qa/lockup.png -crop 1250x260+520+0 +repage -trim -format '%w' info:)
+          lock_slogan=$(convert qa/lockup.png -crop 1250x180+520+260 +repage -trim -format '%w' info:)
           printf 'text-only site=%s slogan=%s\nlockup site=%s slogan=%s\n' "$text_site" "$text_slogan" "$lock_site" "$lock_slogan" | tee qa/width-report.txt
           text_delta=$(( text_site > text_slogan ? text_site - text_slogan : text_slogan - text_site ))
           lock_delta=$(( lock_site > lock_slogan ? lock_site - lock_slogan : lock_slogan - lock_site ))
@@ -51,6 +95,18 @@ jobs:
             echo "QA failed: visible line widths differ by more than 2 px" >&2
             exit 1
           fi
+
+          : > qa/margin-report.txt
+          while IFS= read -r image; do
+            dims=$(identify -format '%wx%h' "$image")
+            bounds=$(convert "$image" -trim -format '%@' info:)
+            printf '%s dimensions=%s bounds=%s\n' "$image" "$dims" "$bounds" >> qa/margin-report.txt
+            if [ "$bounds" != "${dims}+0+0" ]; then
+              echo "QA failed: blank outer margin in $image ($dims vs $bounds)" >&2
+              exit 1
+            fi
+          done < <(find png favicon social -type f -name '*.png' | sort)
+
           find . -type f | sort > FILES.txt
       - name: Upload package
         uses: actions/upload-artifact@v4
