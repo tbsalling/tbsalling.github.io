@@ -68,6 +68,21 @@ jobs:
                   path.write_text(text)
           PY
 
+
+          : > qa/svg-margin-report.txt
+          while IFS= read -r svg; do
+            tmp=$(mktemp --suffix=.png)
+            rsvg-convert -w 2000 "$svg" -o "$tmp"
+            dims=$(identify -format '%wx%h' "$tmp")
+            bounds=$(convert "$tmp" -trim -format '%@' info:)
+            printf '%s dimensions=%s bounds=%s\n' "$svg" "$dims" "$bounds" >> qa/svg-margin-report.txt
+            rm -f "$tmp"
+            if [ "$bounds" != "${dims}+0+0" ]; then
+              echo "QA failed: blank outer SVG margin in $svg ($dims vs $bounds)" >&2
+              exit 1
+            fi
+          done < <(printf '%s\n' svg/*.svg favicon.svg)
+
           for v in dark light; do
             for s in 16 32 48 180 192 256 512 1024; do
               rsvg-convert -w "$s" -h "$s" "svg/mark-$v.svg" -o "png/mark/mark-$v-${s}.png"
