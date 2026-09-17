@@ -37,7 +37,7 @@ jobs:
 
           files = sorted(pathlib.Path("svg").glob("*.svg")) + [pathlib.Path("favicon.svg")]
           vb_re = re.compile(r'viewBox="([\d.+-]+)\s+([\d.+-]+)\s+([\d.+-]+)\s+([\d.+-]+)"')
-          geo_re = re.compile(r'(\d+)x(\d+)\+(\d+)\+(\d+)')
+          geo_re = re.compile(r'(\d+) (\d+) ([+-]\d+) ([+-]\d+)')
 
           for path in files:
               text = path.read_text()
