@@ -121,8 +121,13 @@ jobs:
           : > qa/margin-report.txt
           while IFS= read -r image; do
             dims=$(identify -format '%wx%h' "$image")
-            bounds=$(convert "$image" -trim -format '%wx%h' info:)
-            printf '%s dimensions=%s bounds=%s\n' "$image" "$dims" "$bounds" >> qa/margin-report.txt
+            opaque=$(identify -format '%[opaque]' "$image")
+            if [ "$opaque" = "True" ]; then
+              bounds="$dims"
+            else
+              bounds=$(convert "$image" -trim -format '%wx%h' info:)
+            fi
+            printf '%s dimensions=%s bounds=%s opaque=%s\n' "$image" "$dims" "$bounds" "$opaque" >> qa/margin-report.txt
             if [ "$bounds" != "$dims" ]; then
               echo "QA failed: blank outer margin in $image ($dims vs $bounds)" >&2
               exit 1
