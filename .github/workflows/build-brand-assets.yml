@@ -18,6 +18,20 @@ jobs:
           cd brand-assets
           mkdir -p png/mark png/wordmark png/lockup png/text-only favicon social qa
 
+          rsvg-convert -w 1500 svg/text-only-dark.svg -o qa/text-only.png
+          rsvg-convert -w 1800 svg/lockup-dark.svg -o qa/lockup.png
+          text_site=$(convert qa/text-only.png -crop 1450x220+0+0 +repage -trim -format '%w' info:)
+          text_slogan=$(convert qa/text-only.png -crop 1450x170+0+220 +repage -trim -format '%w' info:)
+          lock_site=$(convert qa/lockup.png -crop 1250x260+520+0 +repage -trim -format '%w' info:)
+          lock_slogan=$(convert qa/lockup.png -crop 1250x180+520+260 +repage -trim -format '%w' info:)
+          printf 'text-only site=%s slogan=%s\nlockup site=%s slogan=%s\n' "$text_site" "$text_slogan" "$lock_site" "$lock_slogan" | tee qa/width-report.txt
+          text_delta=$(( text_site > text_slogan ? text_site - text_slogan : text_slogan - text_site ))
+          lock_delta=$(( lock_site > lock_slogan ? lock_site - lock_slogan : lock_slogan - lock_site ))
+          if [ "$text_delta" -gt 2 ] || [ "$lock_delta" -gt 2 ]; then
+            echo "QA failed: visible line widths differ by more than 2 px" >&2
+            exit 1
+          fi
+
           python3 - <<'PY'
           import math, pathlib, re, subprocess, tempfile
 
@@ -82,19 +96,7 @@ jobs:
 
           convert -size 1200x630 xc:'#070B12' \( png/lockup/lockup-dark-1280.png -resize '1200x630^' \) -gravity center -composite social/og-image-1200x630.png
 
-          rsvg-convert -w 1500 svg/text-only-dark.svg -o qa/text-only.png
-          rsvg-convert -w 1800 svg/lockup-dark.svg -o qa/lockup.png
-          text_site=$(convert qa/text-only.png -crop 1450x220+0+0 +repage -trim -format '%w' info:)
-          text_slogan=$(convert qa/text-only.png -crop 1450x170+0+220 +repage -trim -format '%w' info:)
-          lock_site=$(convert qa/lockup.png -crop 1250x260+520+0 +repage -trim -format '%w' info:)
-          lock_slogan=$(convert qa/lockup.png -crop 1250x180+520+260 +repage -trim -format '%w' info:)
-          printf 'text-only site=%s slogan=%s\nlockup site=%s slogan=%s\n' "$text_site" "$text_slogan" "$lock_site" "$lock_slogan" | tee qa/width-report.txt
-          text_delta=$(( text_site > text_slogan ? text_site - text_slogan : text_slogan - text_site ))
-          lock_delta=$(( lock_site > lock_slogan ? lock_site - lock_slogan : lock_slogan - lock_site ))
-          if [ "$text_delta" -gt 2 ] || [ "$lock_delta" -gt 2 ]; then
-            echo "QA failed: visible line widths differ by more than 2 px" >&2
-            exit 1
-          fi
+
 
           : > qa/margin-report.txt
           while IFS= read -r image; do
